@@ -11,7 +11,13 @@
     "list:emulators": "emulator -list-avds",
     "list:simulators": "xcrun simctl list devices --json",
     "e2e:android:debug:build": "detox build --configuration android.emu.debug",
-    "e2e:ios:debug:build": "detox build --configuration ios.sim.debug"
+    "e2e:android:debug:test": "detox test --configuration android.emu.debug",
+    "e2e:android:release:build": "detox build --configuration android.emu.release",
+    "e2e:android:release:test": "detox test --configuration android.emu.release",
+    "e2e:ios:debug:build": "detox build --configuration ios.sim.debug",
+    "e2e:ios:debug:test": "detox test --configuration ios.sim.debug",
+    "e2e:ios:release:build": "detox build --configuration ios.sim.release",
+    "e2e:ios:release:test": "detox test --configuration ios.sim.release"
   },
   "dependencies": {
     "react": "18.2.0",
