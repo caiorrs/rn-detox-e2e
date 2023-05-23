@@ -7,7 +7,11 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "list:emulators": "emulator -list-avds",
+    "list:simulators": "xcrun simctl list devices --json",
+    "e2e:android:debug:build": "detox build --configuration android.emu.debug",
+    "e2e:ios:debug:build": "detox build --configuration ios.sim.debug"
   },
   "dependencies": {
     "react": "18.2.0",
@@ -23,8 +27,9 @@
     "@types/react": "^18.0.24",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.2.1",
+    "detox": "^20.9.0",
     "eslint": "^8.19.0",
-    "jest": "^29.2.1",
+    "jest": "^29",
     "metro-react-native-babel-preset": "0.73.9",
     "prettier": "^2.4.1",
     "react-test-renderer": "18.2.0",
